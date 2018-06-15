@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+
+function validateform()
+{
+var fname = document.getElementById("firstname").value;
+if(fname == "")
+{
+alert("fill the fields firstname");
+return false;
+}
+
+var lname = document.getElementById("lastname").value;
+if(lname == "")
+{
+alert("fill the fields lastname");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<div align = "center">
+<h1>
+Learning Javascript
+</h1>
+</div>
+
+<div align="center">
+<form method = "post" name = "myform" onsubmit="return validateform()">
+
+<label>firstname:</label>
+<input type="text" name="firstname" id="firstname"/>
+</br>
+
+<label>lastname:</label>
+<input type="text" name="lastname" id="lastname"/></br>
+
+
+<input type="submit" value="reg"/>
+
+</form>
+</div>
+
+</body>
+</html>

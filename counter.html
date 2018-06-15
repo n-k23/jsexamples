@@ -1,0 +1,23 @@
+
+<html>
+<body>
+
+<button type="button" onclick="createCounter()">Count</button>
+
+<script>
+var add = (function () {
+    var counter = 0;
+    return function () 
+	{
+		counter += 1; 
+		return counter;
+	}
+})();
+
+function createCounter(){
+    console.log(add());
+}
+</script>
+
+</body>
+</html>
