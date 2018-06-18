@@ -1,0 +1,35 @@
+<html>
+<body>
+ctrl shift j for output
+<script>
+
+function firstCallback(callback) {
+  
+  console.log('first callback is done');
+  callback();
+}
+
+function secondCallback(callback) {
+  
+  console.log('second callback is done');
+  callback()
+}
+
+function thirdCallback(callback) {
+  
+  console.log('third callback is done');
+  callback();
+}
+
+function runningcallbacks(callback) {
+    thirdCallback(function() {
+       secondCallback(function() {
+            firstCallback(callback);
+        });
+    });
+}
+
+runningcallbacks(function(){console.log('finished')});
+</script>
+</body>
+</html>
