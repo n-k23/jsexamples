@@ -1,0 +1,49 @@
+
+<html>
+<body>
+<script>
+var a = 1, b = 2, c = 3;
+
+
+(function firstFunction(){
+
+	var b = 5, c = 6;
+
+	
+		(function secondFunction()	
+		{
+		
+			var b =11;
+	
+			console.log(" IN SECOND a: "+a+", b: "+b+",c: "+c);
+	
+		(function thirdFunction()
+			{
+
+				var a = 7, c = 9;
+
+
+				console.log("IN THIRD a: "+a+", b: "+b+",c: "+c);	
+				(function fourthFunction()
+				{
+	
+			
+
+		var a = 9, c = 8;
+					console.log("IN FOURTH a: "+a+", b: "+b+",c: "+c);
+			
+				})();
+
+			})();
+
+			
+		})();
+	console.log("IN FIRST a: "+a+", b: "+b+",c: "+c);
+
+	})();
+console.log("OUTSIDE a: "+a+", b: "+b+",c: "+c);
+
+</script>
+</body>
+
+</html>
