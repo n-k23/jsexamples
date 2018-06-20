@@ -1,0 +1,45 @@
+<html>
+<body>
+<script>
+function Midexams(status,callback)
+{
+	console.log('mid exams completed');
+	if(status ="pass")
+	console.log('passed and preparing for lab exams');
+	else
+	console.log('failed');
+	
+	callback();
+}
+function Labexternals(status,callback)
+{
+	console.log('lab exams completed');
+	if(status ="pass")
+	console.log('passed and preparing for sem exams');
+	else
+	console.log('failed');
+	callback();
+}
+function Semesterexams(status,callback)
+{
+	console.log('sem exams completed');
+	if(status ="pass")
+	console.log('passed and qualified');
+	else
+	console.log('failed and want to reattempt');
+	callback();
+}
+function Btechqualifiedstatus(callback){
+	Midexams('pass', function() {
+				Labexternals('pass',function() {
+					Semesterexams('pass',callback)
+				});
+		});
+}
+						
+Btechqualifiedstatus(function() { console.log("finished") });
+</script>
+</body>
+</html>
+
+
