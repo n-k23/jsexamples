@@ -1,0 +1,45 @@
+<html>
+<body>
+<script>
+
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+	console.log(x.value);
+    if (x == "") {
+        alert("field must be filled out");
+        return false;
+    }
+
+var p1 = new Promise(function(resolve, reject) {
+
+	if(x > 35 && x<=100)
+	{
+
+		resolve(status);
+	} 
+	else
+	{
+		reject(new Error("failed"))
+	}
+});
+
+var final = function() {
+	p1.then(function(done) {
+		console.log("passeddddddddddddddddddddd");
+	})
+	.catch(function(error) {
+		console.log(error.message)
+	})
+}
+
+document.getElementById("para").innerHTML = final();
+
+}
+</script>
+<form name="myForm" onsubmit="return validateForm()" method="get" >
+marks: <input type="number" name="fname">
+<input type="submit" value="Submit">
+<p id=para>d</p>
+</form>
+</body>
+</html>
