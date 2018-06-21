@@ -1,0 +1,17 @@
+<html>
+<body>
+<script>
+var main = function() {
+	/* IIFE */
+	(function() {
+		for(var x=0;x<5;x++) {
+			console.log(x);
+		}
+	}());
+	/* VARIABLE DECLARED INSIDE IIFE ARE NOT VISIBLE TO OUTSIDE WORLD */
+	console.log("x cannot be accessed outside the block scope x value is:"+x);
+}
+main();
+</script>
+</body>
+</html>
