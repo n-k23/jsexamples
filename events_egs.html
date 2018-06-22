@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function myDate()
+{
+
+document.getElementById('demo').innerHTML=Date();
+
+}
+function myFunction(selectObject) {
+        var x = selectObject.value;
+        document.getElementById("color").innerHTML = "You selected: " + x;
+      }
+      function mOver(obj) {
+    obj.innerHTML = "Mouse Out"
+}
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over"
+}
+</script>
+<h2>onclick</h2>
+<button onclick="myDate()">onclick event example</button>
+<p id="demo">time by using onclick:</p>
+ 
+ <h2>onchange</h2>
+ <select id="mySelect" onchange="myFunction(this)">
+      <option value="red">red
+      <option value="black">black
+      <option value="pink">pink
+      <option value="blue">blue
+    </select>
+
+    <p id="color"></p>
+    
+    <h2>mouseover and mouseout</h2>
+    <p onmouseover="mOver(this)" onmouseout="mOut(this)" >
+Mouse Over Me</p>
+
+
+
+</body>
+</html>
