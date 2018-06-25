@@ -1,0 +1,23 @@
+<html>
+<body>
+<p id="demo"> </p>
+<script>
+var person = {
+ 	school : function() {
+		return this.name + " " + this.school_name;
+	}
+}
+var person1 = {
+ name : "kavya",
+ school_name : "sunshine",
+}
+var person2 = {
+ name : "sai",
+ school_name : "sunshine",
+}
+var x = person.school.call(person1);
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
