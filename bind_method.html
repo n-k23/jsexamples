@@ -1,0 +1,21 @@
+<html>
+<body>
+ctrl shft j
+<script>
+var person = {
+ 	school : function(a,b,c) {
+		return this.name + " " + this.school_name +" " + a + " " + b + " " +c;
+	}
+}
+var person1 = {
+ name : "kavya",
+ school_name : "sunshine",
+}
+
+var bound = person.school.bind(person1);
+
+console.log(bound("studying", "in", "tenth"));
+</script>
+
+</body>
+</html>
